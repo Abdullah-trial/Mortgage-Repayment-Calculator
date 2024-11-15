@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage Repayment Calculator</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Plus+Jakarta+Sans"
+    /> -->
+  </head>
+  <body>
+    <main class="app">
+      <div class="operations-container">
+        <div class="heading">
+          <h1 class="app-heading">Montgage Calculator</h1>
+          <p class="btn-clear">Clear All</p>
+        </div>
+        <form action="">
+          <label for="amount" class="type-label">Montgage Amount</label>
+          <span>
+            <em class="left-align">£</em
+            ><input
+              type="number"
+              id="amount"
+              class="num-inputs left-align-input"
+            />
+          </span>
+          <label for="term" class="type-label">Montgage Term</label>
+          <span>
+            <input
+              type="number"
+              id="term"
+              class="num-inputs right-align-input"
+            /><em class="right-align">year</em>
+          </span>
+          <label for="rate" class="type-label">Interest Rate</label>
+          <span>
+            <input
+              type="number"
+              id="rate"
+              class="num-inputs right-align-input"
+            /><em class="right-align">%</em>
+          </span>
+          <p class="type-label">Montgage Type</p>
+          <label for="repayment" class="radio-label">
+            <input
+              type="radio"
+              name="montgage-type"
+              id="repayment"
+              value="repayment"
+              class="radio-btn"
+            />
+            Repayment
+          </label>
+          <label for="interest-only" class="radio-label">
+            <input
+              type="radio"
+              name="montgage-type"
+              id="interest-only"
+              value="interest-only"
+              class="radio-btn"
+            />
+            Interest Only
+          </label>
+
+          <button type="submit" class="btn-submit">
+            <img
+              src="./assets/images/icon-calculator.svg"
+              alt=""
+              class="calc-icon"
+            />
+            Calculate Repayment
+          </button>
+        </form>
+      </div>
+      <div class="output-container">
+          <img src="./assets/images/illustration-empty.svg" alt="empty-svg" class="result-icon">    
+          <h1 class="output-label -label-before-calculation">Result shown here</h1>
+          <p class="output-details details-before-calculation">
+            Complete the for mand click "calculate repayments" to see what your monthly repayments would be.
+          </p>
+          <div class="calculated-output">
+            <p class="calculated-label">Your monthly repayments</p>
+            <h1 class="calculated-figure">£1,7997.74</h1>
+            <hr />
+            <p class="total-repayment-label">
+              Total you'll repay over the term
+            </p>
+            <h2 class="total-repayment-figure">£539,322.94</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

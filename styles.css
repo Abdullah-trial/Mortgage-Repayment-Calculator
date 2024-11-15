@@ -1,0 +1,213 @@
+:root {
+    --desktop-view-size: 90rem;
+    --mobile-view-size: 23.4375rem;
+    --lime-color-primary: hsl(61, 70%, 52%);
+    --red-color-primary: hsl(4, 69%, 50%);
+    --white-color-neutral:hsl(0, 0%, 100%);
+    --slate-100-color-neutral:hsl(202, 86%, 94%);
+    --slate-300-color-neutral: hsl(203, 41%, 72%)
+    --slate-500-color-neutral: hsl(200, 26%, 54%);
+    --slate-700-color-neutral: hsl(200, 24%, 40%);
+    --slate-900-color-neutral: hsl(202, 55%, 16%);
+    --font-size: 1rem;
+    --inputs-radius: 0.3rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Jakarta Sans";
+    src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Jakarta Sans";
+    /* width: var(--mobile-view-size);
+    max-width: var(--mobile-view-size);  */
+    background-color: var(--slate-100-color-neutral);
+    color: var(--slate-900-color-neutral);
+}
+
+.app {
+    font-family: "Jakarta Sans";
+    background-color: var(--white-color-neutral);
+    margin: 2rem 0rem;
+}
+.operations-container{
+    padding: 1rem;
+}
+span {
+    display: flex;
+    border: 1px solid var(--slate-900-color-neutral);
+    height: 2rem;  
+    justify-content: space-between;
+    margin: 0.3rem 0rem 1rem;
+    border-radius: var(--inputs-radius);
+}
+
+em {
+    font-weight: 600;
+    font-style: normal;
+    background-color: var(--slate-100-color-neutral);
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-required {
+    background-color: var(--red-color-primary);
+}
+
+.app-heading {
+    font-size: 1.4rem;
+}
+
+.type-label {
+    color: var(--slate-900-color-neutral);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn-clear {
+    font-size: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.num-inputs {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 0rem 1rem;
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+/*REMOVING INPUT TYPE NUMBER ARROW*/
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.left-align-input, .right-align{
+    border-top-right-radius: var(--inputs-radius);
+    border-bottom-right-radius: var(--inputs-radius);
+}
+.right-align-input, .left-align{
+    border-top-left-radius: var(--inputs-radius);
+    border-bottom-left-radius: var(--inputs-radius);
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--slate-900-color-neutral);
+    margin-top: 0.5rem;
+    padding: 0.2rem;
+    padding-left: 1rem;
+    border-radius: var(--inputs-radius);
+    font-weight: 600;
+}
+
+.radio-btn {
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid black;
+
+}
+
+.radio-btn::before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: var(--lime-color-primary);
+}
+.radio-btn:checked::before{
+    transform: scale(1);
+}
+.radio-btn:focus{
+    border-color: var(--lime-color-primary);
+}
+
+.radio-label-selected {
+    background-color: hsla(59, 74%, 85%, 0.541);
+    border-color: var(--lime-color-primary);
+}
+
+
+.btn-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem; 
+    background-color: var(--lime-color-primary);
+    border: none;
+    border-radius: 6rem;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--slate-900-color-neutral);
+    border: none;
+}
+.calc-icon {
+    margin-right: 1rem;
+}
+
+.output-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--mobile-view-size);
+    color: var(--white-color-neutral);
+    background-color: var(--slate-900-color-neutral);
+    padding: 1rem;
+}
+
+.output-label {
+    font-size: 1.4rem;
+}
+
+.output-details {
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--slate-100-color-neutral);
+    margin: 1rem;
+}
+
+.calculated-label, .calculated-figure, .total-repayment-label,.total-repayment-figure, hr{
+    display: none;
+}
+
+
+
+
+ /* @media only screen and (max-width: 90rem) {
+    body {
+        width: var(--desktop-view-size);
+    }
+} */
+
+
